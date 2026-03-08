@@ -1,0 +1,56 @@
+/* Keyframes */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(8px) rotate(45deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes sonarPing {
+  0% { r: 20; opacity: 0.8; }
+  100% { r: 40; opacity: 0; }
+}
+
+/* Data-animate elements: initial state for ScrollTrigger */
+[data-animate] {
+  opacity: 0;
+}
+
+/* Print stylesheet */
+@media print {
+  nav, .page-loader, .cursor-dot, .cursor-ring, .cursor-cross,
+  .cursor-ghost, .scroll-indicator, #node-canvas, .philosophy-ticker,
+  .mobile-menu, .hamburger { display: none !important; }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  section {
+    page-break-inside: avoid;
+    padding: 20pt 0;
+  }
+
+  a { text-decoration: underline; }
+  a::after { content: ' (' attr(href) ')'; font-size: 9pt; }
+
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

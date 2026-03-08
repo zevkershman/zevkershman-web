@@ -1,0 +1,440 @@
+/* Section layout */
+section {
+  position: relative;
+  padding: var(--section-pad) 0;
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
+
+section:not(#hero) {
+  border-top: 1px solid var(--border);
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,85,255,0.03) 0%, transparent 40%), var(--bg);
+}
+
+.section-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+}
+
+.section-label {
+  margin-bottom: 40px;
+}
+
+/* About grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+/* Hero layout */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#node-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-fallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(0,85,255,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.05) 0%, transparent 50%),
+    #0A0A0A;
+}
+
+.hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  padding: 0 var(--content-pad);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--muted);
+  margin-top: 24px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.hero-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--blue);
+  margin: 24px 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.scroll-chevron {
+  width: 12px;
+  height: 12px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  margin: 8px auto 0;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Photo stack */
+.photo-stack {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.photo-pro {
+  position: relative;
+  z-index: 1;
+  width: 75%;
+  transform: rotate(2deg);
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  display: block;
+  aspect-ratio: 600/750;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-entrance);
+}
+
+.photo-pro:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.photo-personal {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  z-index: 2;
+  width: 55%;
+  transform: rotate(-3deg);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  border: 1px solid var(--border);
+  aspect-ratio: 400/500;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-entrance);
+}
+
+.photo-personal:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-intro {
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+}
+
+/* Timeline */
+.timeline-container {
+  position: relative;
+  margin-top: 60px;
+}
+
+.timeline-scroll-wrapper {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-svg {
+  width: 100%;
+  min-width: 800px;
+  height: auto;
+}
+
+.timeline-fade-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  z-index: var(--z-base);
+  display: none;
+}
+
+.timeline-hint {
+  display: none;
+  text-align: center;
+  margin-top: 16px;
+  opacity: 0.5;
+}
+
+.timeline-tooltip {
+  position: absolute;
+  z-index: var(--z-tooltip);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--blue);
+  padding: 16px 20px;
+  max-width: 220px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  pointer-events: none;
+}
+
+.timeline-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Philosophy section */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.philosophy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 40px 32px;
+  position: relative;
+  transition: background 0.3s var(--ease-hover), transform 0.3s var(--ease-hover), border-color 0.3s var(--ease-hover);
+}
+
+.philosophy-card:hover {
+  background: var(--surface2);
+  transform: translateY(-4px);
+  border-color: var(--border-light);
+}
+
+.philosophy-card .card-num {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.philosophy-card .text-card-title {
+  margin-bottom: 16px;
+}
+
+.philosophy-card .text-muted {
+  line-height: 1.7;
+}
+
+/* Stack section */
+.mindmap-container {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  min-height: 500px;
+}
+
+#mindmap-canvas {
+  width: 100%;
+  height: 500px;
+}
+
+/* Contact section */
+#contact {
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 560px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 14px 16px;
+  transition: border-color var(--transition-fast);
+  border-radius: var(--radius);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--error);
+}
+
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-error {
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 6px;
+  display: none;
+}
+
+.form-error.visible {
+  display: block;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: var(--blue);
+  padding: 14px 32px;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  border-radius: var(--radius);
+}
+
+.form-submit:hover {
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.form-status.success {
+  color: var(--success);
+}
+
+.form-status.error {
+  color: var(--error);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--content-pad);
+}
+
+/* Philosophy ticker */
+.philosophy-ticker {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--section-pad);
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.ticker-track span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240, 240, 240, 0.15);
+}
+
+.ticker-dot {
+  color: rgba(201, 168, 76, 0.3) !important;
+  font-size: 16px !important;
+}
+
+.philosophy-ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* Typewriter */
+.typewriter-cursor {
+  animation: blink 500ms step-end infinite;
+  color: var(--muted);
+}
+
+.typewriter-cursor.done {
+  animation: none;
+  opacity: 0;
+  transition: opacity 1s;
+}

@@ -1,0 +1,110 @@
+/* Mobile: ≤768px */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .photo-stack {
+    height: auto;
+  }
+
+  .photo-pro {
+    position: relative;
+    width: 100%;
+    transform: none;
+  }
+
+  .photo-pro:hover {
+    transform: scale(1.02);
+  }
+
+  .photo-personal {
+    position: relative;
+    width: 70%;
+    margin: -40px auto 0;
+    transform: none;
+    right: auto;
+    bottom: auto;
+  }
+
+  .photo-personal:hover {
+    transform: scale(1.02);
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-fade-right {
+    display: block;
+  }
+
+  .timeline-hint {
+    display: block;
+  }
+
+  .text-ghost {
+    font-size: 80px;
+  }
+
+  #mindmap-canvas {
+    height: 400px;
+  }
+}
+
+/* Small mobile: ≤480px */
+@media (max-width: 480px) {
+  .text-hero {
+    font-size: clamp(36px, 12vw, 64px);
+  }
+
+  .philosophy-card {
+    padding: 28px 20px;
+  }
+
+  .contact-form {
+    padding: 0 8px;
+  }
+}
+
+/* Wide screens: ≥1440px */
+@media (min-width: 1440px) {
+  .section-inner {
+    max-width: 1400px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .ticker-track {
+    animation-play-state: paused;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-word-inner {
+    transform: none !important;
+  }
+}

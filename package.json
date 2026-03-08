@@ -1,0 +1,14 @@
+{
+  "name": "zevkershman-web",
+  "version": "1.0.0",
+  "description": "Personal website for Zev Kershman",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
