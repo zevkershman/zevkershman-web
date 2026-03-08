@@ -66,7 +66,7 @@ section:not(#hero) {
 .hero-sub {
   font-family: var(--font-body);
   font-size: clamp(14px, 1.5vw, 18px);
-  color: var(--muted);
+  color: #999999;
   margin-top: 24px;
   line-height: 1.6;
   max-width: 500px;

@@ -20,7 +20,7 @@
       desc: 'SVP at DashQ. Built the operational backbone — workflows, automations, integrations. Systems that run themselves.' },
     { id: '06', title: 'AI ARCHITECT', year: '2023–2024', x: 780, y: 150,
       desc: 'Went deep on AI. Claude, n8n, automated pipelines. Building the next layer of operational intelligence.' },
-    { id: '07', title: 'NOW', year: '2024–', x: 920, y: 200,
+    { id: '07', title: 'FULL-STACK OPERATOR', year: '2024–', x: 920, y: 200,
       desc: 'Full-stack operator. Building what great companies run on. The best system is the one you never have to think about.' }
   ];
 

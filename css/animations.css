@@ -24,9 +24,9 @@
   100% { r: 40; opacity: 0; }
 }
 
-/* Data-animate elements: initial state for ScrollTrigger */
+/* Data-animate elements: visible by default, animated as enhancement */
 [data-animate] {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Print stylesheet */

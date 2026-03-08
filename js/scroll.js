@@ -94,89 +94,68 @@
 
     // Section labels
     gsap.utils.toArray('.section-label').forEach(function(el) {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%'
-        },
-        x: -20,
-        opacity: 0,
-        duration: 0.4,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(el,
+        { x: -20, opacity: 0 },
+        {
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+          x: 0, opacity: 1, duration: 0.4, ease: 'power3.out'
+        }
+      );
     });
 
     // Section headings
     gsap.utils.toArray('.text-display[data-animate]').forEach(function(el) {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%'
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.5,
-        delay: 0.08,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(el,
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+          y: 0, opacity: 1, duration: 0.5, delay: 0.08, ease: 'power3.out'
+        }
+      );
     });
 
     // About photos
     var photoPro = document.querySelector('.photo-pro');
     if (photoPro) {
-      gsap.from(photoPro, {
-        scrollTrigger: {
-          trigger: '.photo-stack',
-          start: 'top 80%'
-        },
-        x: -40,
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(photoPro,
+        { x: -40, opacity: 0 },
+        {
+          scrollTrigger: { trigger: '.photo-stack', start: 'top 80%' },
+          x: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
+        }
+      );
     }
 
     var photoPersonal = document.querySelector('.photo-personal');
     if (photoPersonal) {
-      gsap.from(photoPersonal, {
-        scrollTrigger: {
-          trigger: '.photo-stack',
-          start: 'top 80%'
-        },
-        x: 40,
-        opacity: 0,
-        duration: 0.6,
-        delay: 0.15,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(photoPersonal,
+        { x: 40, opacity: 0 },
+        {
+          scrollTrigger: { trigger: '.photo-stack', start: 'top 80%' },
+          x: 0, opacity: 1, duration: 0.6, delay: 0.15, ease: 'power3.out'
+        }
+      );
     }
 
     // About text paragraphs
     gsap.utils.toArray('.about-text [data-animate]').forEach(function(el, i) {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%'
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.5,
-        delay: i * 0.12,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(el,
+        { y: 40, opacity: 0 },
+        {
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+          y: 0, opacity: 1, duration: 0.5, delay: i * 0.12, ease: 'power3.out'
+        }
+      );
     });
 
     // Philosophy cards batch
     ScrollTrigger.batch('.philosophy-card', {
       start: 'top 85%',
       onEnter: function(batch) {
-        gsap.from(batch, {
-          y: 40,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: 'power3.out'
-        });
+        gsap.fromTo(batch,
+          { y: 40, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, stagger: 0.08, ease: 'power3.out' }
+        );
       },
       once: true
     });
@@ -186,16 +165,13 @@
 
     // Contact
     gsap.utils.toArray('#contact [data-animate]').forEach(function(el) {
-      gsap.from(el, {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%'
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power3.out'
-      });
+      gsap.fromTo(el,
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+          y: 0, opacity: 1, duration: 0.5, ease: 'power3.out'
+        }
+      );
     });
   }
 })();
