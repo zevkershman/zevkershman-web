@@ -31,8 +31,7 @@
 
 /* Print stylesheet */
 @media print {
-  nav, .page-loader, .cursor-dot, .cursor-ring, .cursor-cross,
-  .cursor-ghost, .scroll-indicator, #node-canvas, .philosophy-ticker,
+  nav, .page-loader, .scroll-indicator, #node-canvas, .philosophy-ticker,
   .mobile-menu, .hamburger { display: none !important; }
 
   body {
