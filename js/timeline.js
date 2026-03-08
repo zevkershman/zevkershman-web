@@ -11,17 +11,17 @@
     { id: '01', title: 'BROKERAGE', year: '2008–2014', x: 80, y: 160,
       desc: 'Sold condos in Toronto. Learned that every deal is a system — and every system is only as good as the person running it.' },
     { id: '02', title: 'CONDODORK', year: '2014–2016', x: 220, y: 100,
-      desc: 'Built CondoDork — a real estate content platform. First taste of building something from zero.' },
+      desc: 'Built a real estate content platform from scratch. Learned that creating something from zero changes how you see everything.' },
     { id: '03', title: 'MULTIFAMILY', year: '2016–2018', x: 360, y: 200,
-      desc: 'Moved into multifamily acquisitions. Bigger deals, bigger systems, bigger stakes.' },
+      desc: 'Moved into multifamily acquisitions. Learned that bigger stakes demand better systems — not just harder work.' },
     { id: '04', title: 'PROPTECH', year: '2018–2020', x: 500, y: 120,
-      desc: 'Joined the PropTech wave. Started bridging real estate operations with technology at scale.' },
+      desc: 'Started bridging real estate operations with technology at scale. Learned that the best tech solves problems people stopped questioning.' },
     { id: '05', title: 'DASHQ', year: '2020–2023', x: 640, y: 180,
-      desc: 'SVP at DashQ. Built the operational backbone — workflows, automations, integrations. Systems that run themselves.' },
+      desc: 'Ran operations as SVP. Learned that the real job isn\'t building workflows — it\'s building systems that make workflows obsolete.' },
     { id: '06', title: 'AI ARCHITECT', year: '2023–2024', x: 780, y: 110,
-      desc: 'Went deep on AI. Claude, n8n, automated pipelines. Building the next layer of operational intelligence.' },
+      desc: 'Went deep on AI — Claude, n8n, automated pipelines. Learned that intelligence without integration is just a demo.' },
     { id: '07', title: 'FULL-STACK OPERATOR', year: '2024–', x: 940, y: 160,
-      desc: 'Full-stack operator. Building what great companies run on. The best system is the one you never have to think about.' }
+      desc: 'Building what great companies run on. Learned that the best system is the one nobody has to think about.' }
   ];
 
   // Draw paths between nodes
@@ -75,7 +75,7 @@
     hit.setAttribute('class', 'node-hit');
     hit.setAttribute('cx', node.x);
     hit.setAttribute('cy', node.y);
-    hit.setAttribute('r', '28');
+    hit.setAttribute('r', '34');
     hit.setAttribute('fill', 'transparent');
     hit.setAttribute('cursor', 'pointer');
 
@@ -84,7 +84,7 @@
     circle.setAttribute('class', 'node-circle');
     circle.setAttribute('cx', node.x);
     circle.setAttribute('cy', node.y);
-    circle.setAttribute('r', '20');
+    circle.setAttribute('r', '26');
     circle.setAttribute('fill', '#111111');
     circle.setAttribute('stroke', idx === nodes.length - 1 ? '#C9A84C' : '#333333');
     circle.setAttribute('stroke-width', idx === nodes.length - 1 ? '2' : '1.5');
@@ -94,7 +94,7 @@
       var sonar = document.createElementNS(ns, 'circle');
       sonar.setAttribute('cx', node.x);
       sonar.setAttribute('cy', node.y);
-      sonar.setAttribute('r', '20');
+      sonar.setAttribute('r', '26');
       sonar.setAttribute('fill', 'none');
       sonar.setAttribute('stroke', '#C9A84C');
       sonar.setAttribute('stroke-width', '1');
@@ -108,7 +108,7 @@
     num.setAttribute('x', node.x);
     num.setAttribute('y', node.y + 4);
     num.setAttribute('font-family', 'DM Mono, monospace');
-    num.setAttribute('font-size', '10');
+    num.setAttribute('font-size', '12');
     num.setAttribute('fill', '#555555');
     num.setAttribute('text-anchor', 'middle');
     num.textContent = node.id;
@@ -130,7 +130,7 @@
     title.setAttribute('x', node.x);
     title.setAttribute('y', node.y + 52);
     title.setAttribute('font-family', 'DM Mono, monospace');
-    title.setAttribute('font-size', '11');
+    title.setAttribute('font-size', '12');
     title.setAttribute('fill', '#F0F0F0');
     title.setAttribute('font-weight', '500');
     title.setAttribute('text-anchor', 'middle');
@@ -154,8 +154,8 @@
 
       // Position tooltip
       var svgRect = svg.getBoundingClientRect();
-      var scaleX = svgRect.width / 1000;
-      var scaleY = svgRect.height / 400;
+      var scaleX = svgRect.width / 1080;
+      var scaleY = svgRect.height / 310;
       var tooltipX = svgRect.left + node.x * scaleX;
       var tooltipY = svgRect.top + node.y * scaleY - 20;
 

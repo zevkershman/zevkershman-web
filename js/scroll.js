@@ -68,7 +68,7 @@
       ease: 'none'
     });
 
-    // Hero canvas fade
+    // Hero canvas fade + scale dissolution
     gsap.to('#node-canvas', {
       scrollTrigger: {
         trigger: '#hero',
@@ -76,7 +76,8 @@
         end: 'bottom top',
         scrub: 1.5
       },
-      opacity: 0.7,
+      opacity: 0,
+      scale: 1.15,
       ease: 'none'
     });
 

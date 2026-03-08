@@ -88,8 +88,11 @@
     // Glow for center
     if (isCenter) {
       ctx.beginPath();
-      ctx.arc(x, y, radius + 15, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(201,168,76,0.06)';
+      ctx.arc(x, y, radius + 30, 0, Math.PI * 2);
+      var centerGlow = ctx.createRadialGradient(x, y, radius * 0.5, x, y, radius + 30);
+      centerGlow.addColorStop(0, 'rgba(201,168,76,0.10)');
+      centerGlow.addColorStop(1, 'transparent');
+      ctx.fillStyle = centerGlow;
       ctx.fill();
     }
 
@@ -202,12 +205,12 @@
 
     // Draw outer nodes
     outerPositions.forEach(function(pos) {
-      drawNode(pos.x, pos.y, 20 * scale, pos.label, '#555555', Math.round(9 * scale), '400', false);
+      drawNode(pos.x, pos.y, 24 * scale, pos.label, '#555555', Math.round(10 * scale), '400', false);
     });
 
     // Draw inner nodes
     innerPositions.forEach(function(pos) {
-      drawNode(pos.x, pos.y, 24 * scale, pos.label, '#0055FF', Math.round(10 * scale), '500', false);
+      drawNode(pos.x, pos.y, 28 * scale, pos.label, '#0055FF', Math.round(11 * scale), '500', false);
     });
 
     // Draw sparks
@@ -216,8 +219,8 @@
     }
 
     // Center node
-    var centerPulse = reduceMotion ? 32 * scale : (30 + Math.sin(time * 0.03) * 2) * scale;
-    drawNode(cx, cy, centerPulse, 'ZEV', '#C9A84C', Math.round(14 * scale), '800', true);
+    var centerPulse = reduceMotion ? 40 * scale : (38 + Math.sin(time * 0.03) * 2) * scale;
+    drawNode(cx, cy, centerPulse, 'ZEV', '#C9A84C', Math.round(16 * scale), '800', true);
   }
 
   function animate() {

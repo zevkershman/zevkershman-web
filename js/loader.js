@@ -37,7 +37,7 @@
     // Show typewriter text immediately
     var twOutput = document.querySelector('.typewriter-output');
     if (twOutput) {
-      twOutput.textContent = "The gap between what a company is and what it could be — that's where I live.";
+      twOutput.textContent = "Built by hand. Powered by systems.";
     }
     var twCursor = document.querySelector('.typewriter-cursor');
     if (twCursor) twCursor.style.display = 'none';
@@ -163,7 +163,7 @@
     var cursor = document.querySelector('.typewriter-cursor');
     if (!output) return;
 
-    var text = "The gap between what a company is and what it could be — that\u2019s where I live.";
+    var text = "Built by hand. Powered by systems.";
     var i = 0;
 
     function type() {

@@ -20,8 +20,8 @@
 }
 
 @keyframes sonarPing {
-  0% { r: 20; opacity: 0.8; }
-  100% { r: 40; opacity: 0; }
+  0% { r: 26; opacity: 0.8; }
+  100% { r: 52; opacity: 0; }
 }
 
 /* Data-animate elements: visible by default, animated as enhancement */
