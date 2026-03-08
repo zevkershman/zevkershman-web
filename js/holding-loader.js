@@ -26,6 +26,9 @@
     document.querySelectorAll('.name-inner').forEach(function(el) {
       el.style.transform = 'none';
     });
+    document.querySelectorAll('.name-line').forEach(function(el) {
+      el.style.overflow = 'visible';
+    });
     var mark = document.querySelector('.holding-mark');
     if (mark) mark.style.opacity = '1';
     var title = document.querySelector('.holding-title');
@@ -96,7 +99,7 @@
     var title = document.querySelector('.holding-title');
     var contact = document.querySelector('.holding-contact');
 
-    // Name reveal — staggered
+    // Name reveal — staggered, then remove clip
     if (nameInners.length >= 2) {
       gsap.to(nameInners[0], {
         y: 0,
@@ -108,7 +111,13 @@
         y: 0,
         duration: 0.7,
         ease: 'power3.out',
-        delay: 0.35
+        delay: 0.35,
+        onComplete: function() {
+          // Remove overflow clip so italic letterforms aren't cut off
+          document.querySelectorAll('.name-line').forEach(function(el) {
+            el.style.overflow = 'visible';
+          });
+        }
       });
     }
 
