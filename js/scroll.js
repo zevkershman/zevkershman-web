@@ -181,19 +181,8 @@
       once: true
     });
 
-    // Stack mindmap
-    var mindmapContainer = document.querySelector('.mindmap-container');
-    if (mindmapContainer) {
-      gsap.from(mindmapContainer, {
-        scrollTrigger: {
-          trigger: mindmapContainer,
-          start: 'top 80%'
-        },
-        opacity: 0,
-        duration: 0.6,
-        ease: 'power3.out'
-      });
-    }
+    // Stack mindmap — no gsap.from here; mindmap.js handles its own init
+    // via IntersectionObserver to avoid opacity conflicts with canvas rendering
 
     // Contact
     gsap.utils.toArray('#contact [data-animate]').forEach(function(el) {

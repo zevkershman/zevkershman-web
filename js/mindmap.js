@@ -43,9 +43,9 @@
   ];
 
   function resize() {
-    var rect = canvas.parentElement.getBoundingClientRect();
-    W = rect.width;
-    H = canvas.offsetHeight;
+    var container = canvas.parentElement;
+    W = container.offsetWidth || container.clientWidth || 800;
+    H = parseInt(getComputedStyle(canvas).height, 10) || 500;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
     canvas.style.width = W + 'px';
