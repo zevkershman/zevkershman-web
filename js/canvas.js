@@ -222,14 +222,14 @@
         return;
       }
 
-      // Mouse tracking
-      var heroSection = document.getElementById('hero');
-      if (heroSection) {
-        heroSection.addEventListener('mousemove', function(e) {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-        });
-        heroSection.addEventListener('mouseleave', function() {
+      // Mouse tracking — bind to hero section if it exists, otherwise document
+      var mouseTarget = document.getElementById('hero') || document;
+      mouseTarget.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      if (mouseTarget !== document) {
+        mouseTarget.addEventListener('mouseleave', function() {
           mouseX = -9999;
           mouseY = -9999;
         });

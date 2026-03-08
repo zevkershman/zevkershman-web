@@ -16,7 +16,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Zev Kershman — Full-Stack Operator">
-  <meta property="og:description" content="I build what great companies run on. The gap between what a company is and what it could be — that's where I live.">
+  <meta property="og:description" content="I build what great companies run on.">
   <meta property="og:image" content="https://zevkershman.com/assets/images/zev-og.jpg">
   <meta property="og:url" content="https://zevkershman.com">
   <meta property="og:type" content="website">
@@ -53,11 +53,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/holding.css">
 
   <!-- Vercel Analytics -->
   <script>
@@ -75,282 +71,53 @@
     </span>
   </div>
 
-  <!-- Skip nav -->
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <main>
+    <canvas id="node-canvas" aria-hidden="true" role="presentation"></canvas>
+    <noscript>
+      <div class="canvas-fallback" aria-hidden="true"></div>
+    </noscript>
 
-  <!-- Navigation -->
-  <nav aria-label="Main navigation">
-    <a href="#hero" class="nav-logo" aria-label="Home">
-      <span class="logo-z">Z</span><span class="logo-k">K</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#journey">JOURNEY</a></li>
-      <li><a href="#philosophy">PHILOSOPHY</a></li>
-      <li><a href="#stack">STACK</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-    <button type="button" class="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+    <!-- ZK mark -->
+    <div class="holding-mark" aria-hidden="true">
+      <span class="mark-z">Z</span><span class="mark-k">K</span>
+    </div>
 
-  <!-- Mobile overlay -->
-  <div class="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true" hidden>
-    <ul>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#journey">JOURNEY</a></li>
-      <li><a href="#philosophy">PHILOSOPHY</a></li>
-      <li><a href="#stack">STACK</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </div>
+    <!-- Center content -->
+    <div class="holding-content">
+      <h1 class="holding-name">
+        <span class="name-line"><span class="name-inner">ZEV</span></span>
+        <br>
+        <span class="name-line"><span class="name-inner">KERSHMAN</span></span>
+      </h1>
+      <p class="holding-title">FULL-STACK OPERATOR</p>
+    </div>
 
-  <main id="main-content">
-    <!-- ═══════════════ HERO ═══════════════ -->
-    <section id="hero" aria-label="Zev Kershman — Hero">
-      <canvas id="node-canvas" aria-hidden="true" role="presentation"></canvas>
-      <noscript>
-        <div class="canvas-fallback" aria-hidden="true"></div>
-      </noscript>
-      <div class="hero-content" data-animate>
-        <h1 class="text-hero">
-          <span class="hero-word"><span class="hero-word-inner">ZEV</span></span>
-          <br>
-          <span class="hero-word"><span class="hero-word-inner">KERSHMAN</span></span>
-        </h1>
-        <p class="hero-sub">
-          <span class="typewriter-output" aria-hidden="true"></span>
-          <span class="typewriter-cursor" aria-hidden="true">|</span>
-        </p>
-        <div class="hero-rule" data-animate></div>
-      </div>
-      <div class="scroll-indicator" aria-hidden="true">
-        <span class="text-small">SCROLL</span>
-        <div class="scroll-chevron"></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ ABOUT ═══════════════ -->
-    <section id="about" aria-label="About Zev Kershman">
-      <!-- Philosophy ticker -->
-      <div class="philosophy-ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>FIRE YOURSELF</span>
-          <span class="ticker-dot">·</span>
-          <span>MILE DEEP NOT MILE WIDE</span>
-          <span class="ticker-dot">·</span>
-          <span>FULL-STACK EMPLOYEE</span>
-          <span class="ticker-dot">·</span>
-          <span>NOW NEXT LATER</span>
-          <span class="ticker-dot">·</span>
-          <span>FIRE YOURSELF</span>
-          <span class="ticker-dot">·</span>
-          <span>MILE DEEP NOT MILE WIDE</span>
-          <span class="ticker-dot">·</span>
-          <span>FULL-STACK EMPLOYEE</span>
-          <span class="ticker-dot">·</span>
-          <span>NOW NEXT LATER</span>
-          <span class="ticker-dot">·</span>
-          <span>FIRE YOURSELF</span>
-          <span class="ticker-dot">·</span>
-          <span>MILE DEEP NOT MILE WIDE</span>
-          <span class="ticker-dot">·</span>
-          <span>FULL-STACK EMPLOYEE</span>
-          <span class="ticker-dot">·</span>
-          <span>NOW NEXT LATER</span>
-          <span class="ticker-dot">·</span>
-        </div>
-      </div>
-
-      <div class="section-inner">
-        <p class="text-label section-label" data-animate><span class="label-num">01</span> — ABOUT</p>
-        <div class="about-grid">
-          <!-- Left: photo stack -->
-          <div class="photo-stack">
-            <picture>
-              <source srcset="/assets/images/zev-pro.webp 600w, /assets/images/zev-pro@2x.webp 1200w" type="image/webp">
-              <img src="/assets/images/zev-pro.jpg"
-                   srcset="/assets/images/zev-pro.jpg 600w, /assets/images/zev-pro@2x.jpg 1200w"
-                   sizes="(max-width: 768px) 100vw, 45vw"
-                   width="600" height="750"
-                   alt="Zev Kershman — professional photo"
-                   class="photo-pro"
-                   loading="eager"
-                   data-animate>
-            </picture>
-            <picture>
-              <source srcset="/assets/images/zev-personal.webp 400w, /assets/images/zev-personal@2x.webp 800w" type="image/webp">
-              <img src="/assets/images/zev-personal.jpg"
-                   srcset="/assets/images/zev-personal.jpg 400w, /assets/images/zev-personal@2x.jpg 800w"
-                   sizes="(max-width: 768px) 100vw, 30vw"
-                   width="400" height="500"
-                   alt="Zev Kershman — personal photo"
-                   class="photo-personal"
-                   loading="lazy"
-                   data-animate>
-            </picture>
-          </div>
-
-          <!-- Right: story -->
-          <div class="about-text">
-            <p class="about-intro text-body-large text-gold" data-animate>
-              Most operators pick a lane. I build the road.
-            </p>
-            <p class="text-body" data-animate>
-              I'm a full-stack operator — the person who turns a company's scattered tools, people, and processes into one system that actually runs. I design the workflows, wire the automations, and build the AI layer that makes a team of one perform like a team of ten.
-            </p>
-            <p class="text-body" data-animate>
-              I got here through a decade in real estate — where nothing is clean and everything is human. That messy complexity is what pulled me into PropTech, then into systems architecture, then into AI. Every chapter taught me the same thing: the best technology disappears into the operation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ JOURNEY ═══════════════ -->
-    <section id="journey" aria-label="Zev Kershman Career Journey">
-      <div class="section-inner">
-        <p class="text-label section-label" data-animate><span class="label-num">02</span> — THE PATH</p>
-        <h2 class="text-display" data-animate>
-          EVERY SYSTEM I BUILD STARTS WITH<br>
-          <span class="text-gold">A PROBLEM I LIVED FIRST.</span>
-        </h2>
-        <div class="timeline-container">
-          <div class="timeline-fade-right" aria-hidden="true"></div>
-          <div class="timeline-scroll-wrapper">
-            <svg class="timeline-svg" viewBox="0 0 1080 310" preserveAspectRatio="xMidYMid meet" aria-label="Career timeline from 2008 to present" role="img">
-            </svg>
-            <div class="timeline-tooltip" hidden aria-live="polite" role="tooltip"></div>
-          </div>
-          <p class="timeline-hint text-small" aria-hidden="true">← SCROLL TO EXPLORE →</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ PHILOSOPHY ═══════════════ -->
-    <section id="philosophy" aria-label="How Zev Kershman Thinks">
-      <div class="section-inner">
-        <p class="text-label section-label" data-animate><span class="label-num">03</span> — HOW I THINK</p>
-        <h2 class="text-display" data-animate>
-          SYSTEMS OVER HEROICS.<br>
-          <span class="text-gold">ALWAYS.</span>
-        </h2>
-        <div class="philosophy-grid">
-          <div class="text-ghost" aria-hidden="true">SYSTEMS</div>
-
-          <div class="philosophy-card" data-animate>
-            <span class="card-num">01</span>
-            <h3 class="text-card-title">FIRE YOURSELF</h3>
-            <p class="text-muted">Build systems that eliminate your role. If it still needs you to run, it's not done yet.</p>
-          </div>
-
-          <div class="philosophy-card" data-animate>
-            <span class="card-num">02</span>
-            <h3 class="text-card-title">FULL-STACK EMPLOYEE</h3>
-            <p class="text-muted">One person plus AI agents equals team output. I've replaced entire departments with workflows and a laptop.</p>
-          </div>
-
-          <div class="philosophy-card" data-animate>
-            <span class="card-num">03</span>
-            <h3 class="text-card-title">MILE DEEP, NOT MILE WIDE</h3>
-            <p class="text-muted">Fix the root cause, not the symptom. One deep fix beats twenty surface patches every time.</p>
-          </div>
-
-          <div class="philosophy-card" data-animate>
-            <span class="card-num">04</span>
-            <h3 class="text-card-title">NOW · NEXT · LATER</h3>
-            <p class="text-muted">Ship something today. Architect something better in parallel. Never stop at "good enough."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ STACK ═══════════════ -->
-    <section id="stack" aria-label="What Zev Kershman Operates With">
-      <div class="section-inner">
-        <p class="text-label section-label" data-animate><span class="label-num">04</span> — WHAT I OPERATE WITH</p>
-        <h2 class="text-display" data-animate>
-          NOT A TOOLKIT.<br>
-          <span class="text-gold">A NERVOUS SYSTEM.</span>
-        </h2>
-        <div class="mindmap-container">
-          <canvas id="mindmap-canvas" aria-label="Technology stack mind map showing tools and platforms organized by category" role="img"></canvas>
-          <noscript>
-            <p class="text-body">Tools: n8n, Claude AI, Airtable, Slack, Vercel, Make, HubSpot, Notion, GitHub, Figma, Loom, Google Workspace, Zapier</p>
-          </noscript>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ CONTACT ═══════════════ -->
-    <section id="contact" aria-label="Contact Zev Kershman">
-      <div class="section-inner">
-        <h2 class="text-display" data-animate>
-          LET'S BUILD<br>
-          <span class="text-gold">SOMETHING</span> THAT<br>
-          <span class="text-gold">RUNS ITSELF.</span>
-        </h2>
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-          <input type="hidden" name="access_key" value="81d912b7-2e7c-4be7-9149-f5a81c84eca5">
-          <input type="hidden" name="subject" value="New contact from zevkershman.com">
-          <input type="hidden" name="from_name" value="ZevKershman.com Contact Form">
-
-          <!-- Honeypot -->
-          <div style="position:absolute;left:-9999px" aria-hidden="true">
-            <input type="text" name="botcheck" tabindex="-1" autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name">
-            <p class="form-error" role="alert"></p>
-          </div>
-          <div class="form-group">
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
-            <p class="form-error" role="alert"></p>
-          </div>
-          <div class="form-group">
-            <label for="message">MESSAGE</label>
-            <textarea id="message" name="message" required placeholder="What are you building?"></textarea>
-            <p class="form-error" role="alert"></p>
-          </div>
-          <button type="submit" class="form-submit">
-            <span>SEND</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
+    <!-- Bottom contact -->
+    <div class="holding-contact">
+      <a href="https://www.linkedin.com/in/zevkershman/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+      <a href="mailto:zev@zevkershman.com" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+        </svg>
+      </a>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <p class="text-small">© <span id="footer-year"></span> ZEV KERSHMAN</p>
-      <p class="footer-tagline">BUILT BY HAND. POWERED BY SYSTEMS.</p>
-    </div>
-  </footer>
-
-  <!-- GSAP -->
+  <!-- GSAP (for loader only) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- Lenis smooth scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
 
   <!-- Local JS -->
   <script src="js/canvas.js"></script>
-  <script src="js/mindmap.js"></script>
-<script src="js/loader.js"></script>
-  <script src="js/nav.js"></script>
-  <script src="js/scroll.js"></script>
-  <script src="js/timeline.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/holding-loader.js"></script>
+
+  <!-- Vercel Analytics -->
   <script src="js/monitoring.js"></script>
 </body>
 </html>
