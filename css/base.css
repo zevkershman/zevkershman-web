@@ -106,7 +106,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--muted);
+}
+
+.section-label .label-num {
+  color: var(--blue);
 }
 
 .text-muted {
