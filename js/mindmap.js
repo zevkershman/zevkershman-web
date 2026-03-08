@@ -15,11 +15,11 @@
 
   // Spec: central ZEV node (gold)
   // Inner ring r=140px, 5 nodes at 0/72/144/216/288 degrees
-  // Outer ring r=240px, 5 nodes at 36/108/180/252/324 degrees
-  // Total 10 tool nodes, no category hubs
+  // Outer ring r=260px, 8 nodes at 45° intervals
+  // Total 13 tool nodes, no category hubs
 
   var INNER_R = 140;
-  var OUTER_R = 240;
+  var OUTER_R = 260;
 
   var innerNodes = [
     { label: 'n8n',      angleDeg: 0 },
@@ -30,11 +30,14 @@
   ];
 
   var outerNodes = [
-    { label: 'Make',     angleDeg: 36 },
-    { label: 'HubSpot',  angleDeg: 108 },
-    { label: 'Notion',   angleDeg: 180 },
-    { label: 'GitHub',   angleDeg: 252 },
-    { label: 'Figma',    angleDeg: 324 }
+    { label: 'Make',       angleDeg: 0 },
+    { label: 'HubSpot',   angleDeg: 45 },
+    { label: 'Notion',    angleDeg: 90 },
+    { label: 'GitHub',    angleDeg: 135 },
+    { label: 'Figma',     angleDeg: 180 },
+    { label: 'Loom',      angleDeg: 225 },
+    { label: 'Workspace', angleDeg: 270 },
+    { label: 'Zapier',    angleDeg: 315 }
   ];
 
   function degToRad(d) { return d * Math.PI / 180; }

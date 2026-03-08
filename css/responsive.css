@@ -79,7 +79,7 @@
 /* Wide screens: ≥1440px */
 @media (min-width: 1440px) {
   .section-inner {
-    max-width: 1400px;
+    max-width: 1280px;
   }
 }
 

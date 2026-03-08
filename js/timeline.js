@@ -8,19 +8,19 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var nodes = [
-    { id: '01', title: 'BROKERAGE', year: '2008–2014', x: 80, y: 200,
+    { id: '01', title: 'BROKERAGE', year: '2008–2014', x: 80, y: 160,
       desc: 'Sold condos in Toronto. Learned that every deal is a system — and every system is only as good as the person running it.' },
-    { id: '02', title: 'CONDODORK', year: '2014–2016', x: 220, y: 140,
+    { id: '02', title: 'CONDODORK', year: '2014–2016', x: 220, y: 100,
       desc: 'Built CondoDork — a real estate content platform. First taste of building something from zero.' },
-    { id: '03', title: 'MULTIFAMILY', year: '2016–2018', x: 360, y: 240,
+    { id: '03', title: 'MULTIFAMILY', year: '2016–2018', x: 360, y: 200,
       desc: 'Moved into multifamily acquisitions. Bigger deals, bigger systems, bigger stakes.' },
-    { id: '04', title: 'PROPTECH', year: '2018–2020', x: 500, y: 160,
+    { id: '04', title: 'PROPTECH', year: '2018–2020', x: 500, y: 120,
       desc: 'Joined the PropTech wave. Started bridging real estate operations with technology at scale.' },
-    { id: '05', title: 'DASHQ', year: '2020–2023', x: 640, y: 220,
+    { id: '05', title: 'DASHQ', year: '2020–2023', x: 640, y: 180,
       desc: 'SVP at DashQ. Built the operational backbone — workflows, automations, integrations. Systems that run themselves.' },
-    { id: '06', title: 'AI ARCHITECT', year: '2023–2024', x: 780, y: 150,
+    { id: '06', title: 'AI ARCHITECT', year: '2023–2024', x: 780, y: 110,
       desc: 'Went deep on AI. Claude, n8n, automated pipelines. Building the next layer of operational intelligence.' },
-    { id: '07', title: 'FULL-STACK OPERATOR', year: '2024–', x: 920, y: 200,
+    { id: '07', title: 'FULL-STACK OPERATOR', year: '2024–', x: 940, y: 160,
       desc: 'Full-stack operator. Building what great companies run on. The best system is the one you never have to think about.' }
   ];
 
