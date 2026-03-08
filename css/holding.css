@@ -128,6 +128,8 @@ body::after {
   display: inline-block;
   overflow: hidden;
   line-height: 1;
+  padding: 0 0.08em;
+  margin: 0 -0.08em;
 }
 
 .name-inner {
